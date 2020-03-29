@@ -1,7 +1,54 @@
 # COVID19-India-API
 This repo is created to get all the details of COVID-19 in India. These API will help to get the details of states in India. The routes for the API are mentioned below:
 
-# Response
+## Prerequisites
+
+To work with the api you must have to install the following:
+
+- [NodeJS](https://nodejs.org/en/download/) - Node.js® is a JavaScript runtime
+  built on Chrome's V8 JavaScript engine.
+- [MongoDB Server](https://docs.mongodb.com/manual/installation/) - NoSql
+  Database and server
+- [Postman](https://www.getpostman.com/downloads/) - API development environment
+
+## Installation
+
+Before doing anything you have to clone or download and unzip the project folder, open terminal and navigate to the project folder and run:
+
+```bash
+npm install
+```
+
+This will install all the dependencies required by the project.
+
+## Getting Started
+
+To start using this API, start your local database server, open terminal and
+navigate to the project folder and run:
+
+```bash
+npm run start
+```
+
+If an error occur, check your database server or check if you have installed the
+prerequisites correctly.
+
+If there was no error, open Postman and create and send a new get request to:
+
+```
+http://localhost:3000/
+```
+
+Expected Output:
+
+```
+{
+	message: "Welcome!"
+}
+```
+
+
+## Response
 ```
 {
   name:'name_of_state',
@@ -13,7 +60,7 @@ This repo is created to get all the details of COVID-19 in India. These API will
 }
 ```
 
-# Routes
+## Routes
 
 | S.No. | Route             | Method | Description                                      |
 |-------|-------------------|--------|--------------------------------------------------|
@@ -23,7 +70,7 @@ This repo is created to get all the details of COVID-19 in India. These API will
 | 4.    | /state/:statename | GET    | Get state details                                |
 | 5.    | /latest           | GET    | Get Latest Data with Comparision of previous date|
 
-## [Deployment](https://covid19-india-adhikansh.herokuapp.com/)
+## Deployment [click me](https://covid19-india-adhikansh.herokuapp.com/)
 
 This api can be hosted on platform like heroku, aws, and others. MongoDB Atlas
 or Matlab can be used for remote database.<br /> For instance, the application
@@ -36,5 +83,12 @@ you need to just to create your account and make a new cluster and link the
 cluster to your application through a URL. Following the given steps, you would
 have a remote application up and running.
 
-# Data Source
+## Data Source
 [This](https://www.mohfw.gov.in/) is the source of data for the APIs. This data is officially provide by the Govt. of India.
+
+
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
+
+If you are the helping and contributing one, your efforts and suggestion are always welcomed.
+
