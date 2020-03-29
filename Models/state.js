@@ -4,11 +4,7 @@ var StateSchema = mongoose.Schema({
     type: String,
     require: true
   },
-  confirmedNational: {
-    type: Number,
-    require: true
-  },
-  confirmedInternational: {
+  confirmed: {
     type: Number,
     require: true
   },
