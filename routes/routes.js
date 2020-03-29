@@ -3,7 +3,34 @@ var router = express.Router();
 var State = require("../Models/state");
 
 router.get("/summary", (req, res) => {
-  res.json({ message: "Sumarry" });
+  State.find()
+    .then(data => {
+      var confirmedNational = 0;
+      var confirmedInterNational = 0;
+      var death = 0;
+      var cured = 0;
+      var total = 0;
+      data.map(d => {
+        confirmedNational =
+          confirmedNational + parseInt(d["confirmedNational"]);
+        confirmedInterNational =
+          confirmedInterNational + parseInt(d["confirmedInternational"]);
+        death = death + parseInt(d["death"]);
+        cured = cured + parseInt(d["cured"]);
+      });
+
+      total = confirmedNational + confirmedInterNational + death + cured;
+      res.json({
+        "Total Confirmed cases (Indian National)": confirmedNational,
+        "Total Confirmed cases ( Foreign National )": confirmedInterNational,
+        "Cured/Discharged/Migrated": cured,
+        Death: death,
+        "Total Cases": total
+      });
+    })
+    .catch(err => {
+      console.log("Error is ", err.message);
+    });
 });
 
 router.get("/states", (req, res) => {
