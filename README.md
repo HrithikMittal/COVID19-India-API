@@ -1,4 +1,6 @@
 # COVID19-India-API
+[https://covid19-india-adhikansh.herokuapp.com/summary](https://covid19-india-adhikansh.herokuapp.com/)
+
 This repo is created to get all the details of COVID-19 in India. These API will help to get the details of states in India. The routes for the API are mentioned below:
 
 ## Prerequisites
