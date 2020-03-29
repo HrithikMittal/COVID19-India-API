@@ -5,24 +5,19 @@ var State = require("../Models/state");
 router.get("/summary", (req, res) => {
   State.find()
     .then(data => {
-      var confirmedNational = 0;
-      var confirmedInterNational = 0;
+      var confirmed = 0;
       var death = 0;
       var cured = 0;
       var total = 0;
       data.map(d => {
-        confirmedNational =
-          confirmedNational + parseInt(d["confirmedNational"]);
-        confirmedInterNational =
-          confirmedInterNational + parseInt(d["confirmedInternational"]);
+        confirmed = confirmed + parseInt(d["confirmed"]);
         death = death + parseInt(d["death"]);
         cured = cured + parseInt(d["cured"]);
       });
 
-      total = confirmedNational + confirmedInterNational + death + cured;
+      total = confirmed + death + cured;
       res.json({
-        "Total Confirmed cases (Indian National)": confirmedNational,
-        "Total Confirmed cases ( Foreign National )": confirmedInterNational,
+        "Total Confirmed cases": confirmed,
         "Cured/Discharged/Migrated": cured,
         Death: death,
         "Total Cases": total
