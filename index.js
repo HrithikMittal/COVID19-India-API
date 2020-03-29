@@ -19,6 +19,9 @@ app.get("/", (req, res) => {
   res.send("Welcome to this API");
 });
 
+var Route = require("./routes.js");
+app.use("/", Route);
+
 app.listen(process.env.PORT, () => {
   console.log(`PORT is listening on port ${process.env.PORT}`);
 });
