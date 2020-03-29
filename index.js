@@ -3,7 +3,7 @@ var dotenv = require("dotenv").config();
 var app = express();
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-var cors = require("core");
+var cors = require("cors");
 
 var Route = require("./routes.js");
 var data = require("./home.json");
