@@ -2,6 +2,11 @@ var express = require("express");
 var dotenv = require("dotenv").config();
 var app = express();
 var mongoose = require("mongoose");
+var bodyParser = require("body-parser");
+var cors = require("core");
+
+var Route = require("./routes.js");
+var data = require("./home.json");
 
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -15,12 +20,14 @@ mongoose
     console.log("Error is connection to DB " + err.message);
   });
 
-app.get("/", (req, res) => {
-  res.send("Welcome to this API");
-});
-
-var Route = require("./routes.js");
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use("/", Route);
+
+app.get("/", (req, res) => {
+  res.send(data);
+});
 
 app.listen(process.env.PORT, () => {
   console.log(`PORT is listening on port ${process.env.PORT}`);

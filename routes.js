@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/summary", (req, res) => {
+router.get("/sumarry", (req, res) => {
   res.json({ message: "Sumarry" });
 });
 
