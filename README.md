@@ -15,12 +15,13 @@
 
 # Routes
 
-| S.No. | Route             | Method | Description                                     |
-|-------|-------------------|--------|-------------------------------------------------|
-| 1.    | /                 | GET    | Welcome to APIs                                 |
-| 2.    | /summary          | GET    | Total data containing deaths and cases in India |
-| 3.    | /states           | GET    | Total data of all states                        |
-| 4.    | /state/:statename | GET    | Get state details                               |
+| S.No. | Route             | Method | Description                                      |
+|-------|-------------------|--------|--------------------------------------------------|
+| 1.    | /                 | GET    | Welcome to APIs                                  |
+| 2.    | /summary          | GET    | Total data containing deaths and cases in India  |
+| 3.    | /states           | GET    | Total data of all states                         |
+| 4.    | /state/:statename | GET    | Get state details                                |
+| 5.    | /latest           | GET    | Get Latest Data with Comparision of previous date|
 
 
 # Data Source
