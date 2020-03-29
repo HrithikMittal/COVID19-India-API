@@ -45,7 +45,7 @@ router.get("/states", (req, res) => {
 
 router.get("/state/:statename", (req, res) => {
   var stateid = req.url.split("/");
-  stateid = stateid[2].replace("%20", " ");
+  stateid = stateid[2].replace(/%20/g, " ");
   console.log(stateid);
   State.find({ name: stateid })
     .then(data => {
