@@ -1,8 +1,13 @@
 var express = require("express");
 var router = express.Router();
+var State = require("../Models/state");
 
 router.get("/sumarry", (req, res) => {
   res.json({ message: "Sumarry" });
+});
+
+router.get("/states", (req, res) => {
+  res.json({ message: "States Details" });
 });
 
 router.get("/state/:statename", (req, res) => {
