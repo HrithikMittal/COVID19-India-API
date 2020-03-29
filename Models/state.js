@@ -8,7 +8,7 @@ var StateSchema = mongoose.Schema({
     type: Number,
     require: true
   },
-  confirmedInternation: {
+  confirmedInternational: {
     type: Number,
     require: true
   },

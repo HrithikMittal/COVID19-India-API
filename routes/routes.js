@@ -2,16 +2,31 @@ var express = require("express");
 var router = express.Router();
 var State = require("../Models/state");
 
-router.get("/sumarry", (req, res) => {
+router.get("/summary", (req, res) => {
   res.json({ message: "Sumarry" });
 });
 
 router.get("/states", (req, res) => {
-  res.json({ message: "States Details" });
+  State.find()
+    .then(data => {
+      res.json({ state: data });
+    })
+    .catch(err => {
+      console.log("Error is ", err.message);
+    });
 });
 
 router.get("/state/:statename", (req, res) => {
-  res.json({ message: "State Name" });
+  var stateid = req.url.split("/");
+  stateid = stateid[2].replace("%20", " ");
+  console.log(stateid);
+  State.find({ name: stateid })
+    .then(data => {
+      res.json({ data });
+    })
+    .catch(err => {
+      console.log("Error is ", err.message);
+    });
 });
 
 router.get("/latest", (req, res) => {
