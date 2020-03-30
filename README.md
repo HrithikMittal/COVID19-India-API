@@ -88,6 +88,8 @@ have a remote application up and running.
 ## Data Source
 [This](https://www.mohfw.gov.in/) is the source of data for the APIs. This data is officially provide by the Govt. of India.
 
+## Language Wrappers Available
+ * <a href="https://www.npmjs.com/package/covidindia">JavaScript Module</a> available on NPM, developed by <a href="https://github.com/abhinavmir/">@abhinavmir</a>.
 
 ## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
