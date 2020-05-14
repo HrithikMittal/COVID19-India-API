@@ -1,7 +1,10 @@
 # COVID19-India-API
+
 [https://covid19-india-adhikansh.herokuapp.com/summary](https://covid19-india-adhikansh.herokuapp.com/)
 
-This repo is created to get all the details of COVID-19 in India. These API will help to get the details of states in India. The routes for the API are mentioned below:
+This repo is created to get all the details of COVID-19 in India. These API will
+help to get the details of states in India. The routes for the API are mentioned
+below:
 
 ## Prerequisites
 
@@ -15,7 +18,8 @@ To work with the api you must have to install the following:
 
 ## Installation
 
-Before doing anything you have to clone or download and unzip the project folder, open terminal and navigate to the project folder and run:
+Before doing anything you have to clone or download and unzip the project
+folder, open terminal and navigate to the project folder and run:
 
 ```bash
 npm install
@@ -49,8 +53,8 @@ Expected Output:
 }
 ```
 
-
 ## Response
+
 ```
 {
   name:'name_of_state',
@@ -64,13 +68,13 @@ Expected Output:
 
 ## Routes
 
-| S.No. | Route             | Method | Description                                      |
-|-------|-------------------|--------|--------------------------------------------------|
-| 1.    | /                 | GET    | Welcome to APIs                                  |
-| 2.    | /summary          | GET    | Total data containing deaths and cases in India  |
-| 3.    | /states           | GET    | Total data of all states                         |
-| 4.    | /state/:statename | GET    | Get state details                                |
-| 5.    | /latest           | GET    | Get Latest Data with Comparision of previous date|
+| S.No. | Route             | Method | Description                                       |
+| ----- | ----------------- | ------ | ------------------------------------------------- |
+| 1.    | /                 | GET    | Welcome to APIs                                   |
+| 2.    | /summary          | GET    | Total data containing deaths and cases in India   |
+| 3.    | /states           | GET    | Total data of all states                          |
+| 4.    | /state/:statename | GET    | Get state details                                 |
+| 5.    | /latest           | GET    | Get Latest Data with Comparision of previous date |
 
 ## Deployment [click me](https://covid19-india-adhikansh.herokuapp.com/)
 
@@ -86,13 +90,17 @@ cluster to your application through a URL. Following the given steps, you would
 have a remote application up and running.
 
 ## Data Source
-[This](https://www.mohfw.gov.in/) is the source of data for the APIs. This data is officially provide by the Govt. of India.
+
+[This](https://www.mohfw.gov.in/) is the source of data for the APIs. This data
+is officially provide by the Govt. of India.
 
 ## Language Wrappers Available
- * <a href="https://www.npmjs.com/package/covidindia">JavaScript Module</a> available on NPM, developed by <a href="https://github.com/abhinavmir/">@abhinavmir</a>.
+
+- <a href="https://www.npmjs.com/package/covidindia">JavaScript Module</a>
+  available on NPM, developed by
+  <a href="https://github.com/abhinavmir/">@abhinavmir</a>.
 
 ## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-
-If you are the helping and contributing one, your efforts and suggestion are always welcomed.
-
+If you are the helping and contributing one, your efforts and suggestion are
+always welcomed.
