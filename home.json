@@ -1,0 +1,7 @@
+{
+  "/": "GET || Welcome to APIs",
+  "/summary": "GET || Total data containing deaths and cases in India",
+  "/states": "GET || Total data of every state together",
+  "/state/:statename": "GET || Total data of everything of particular",
+  "/latest": "GET || Total data with the difference"
+}
