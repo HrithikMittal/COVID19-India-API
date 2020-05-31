@@ -1,21 +1,25 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 var StateSchema = mongoose.Schema({
   name: {
     type: String,
-    require: true
+    require: true,
   },
-  confirmed: {
+  active: {
     type: Number,
-    require: true
+    require: true,
   },
   cured: {
     type: Number,
-    require: true
+    require: true,
   },
   death: {
     type: Number,
-    require: true
-  }
+    require: true,
+  },
+  total: {
+    type: Number,
+    require: true,
+  },
 });
 
-module.exports = State = mongoose.model("State", StateSchema);
+module.exports = State = mongoose.model('State', StateSchema);
